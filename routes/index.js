@@ -28,7 +28,7 @@ function generate(){
 
   brutos = []
   // generate bruto
-  for (let index = 0; index < 5; index++) {
+  for (let index = 0; index < chance().integer({min: 7, max: 10}); index++) {
       var yesterday = moment().subtract(1,'day')
       var now = moment()
       var start = moment(faker.date.between(yesterday,now))
